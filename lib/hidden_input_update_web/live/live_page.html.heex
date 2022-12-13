@@ -1,0 +1,39 @@
+<div phx-hook="Test" id="test">
+<.form
+:let={f}
+for={:test}
+phx-submit="submit"
+phx-change="change"
+>
+<p>There's a hidden input called "hidden" here whose value should be: <%= @value %></p>
+<%= hidden_input(f, :hidden, value: @value) %>
+   
+<p>This text input also holds the same value:</p>
+<%= text_input(f, :input, value: @value) %>
+
+<div phx-click="increase" class="alert alert-info">Click this div to increase the value and observe a mismatch</div>
+
+<button type="button" phx-click="increase">Click this button to increase the value reliably</button>
+   
+<p>Click a couple of times on the div, then click on "trigger change" below to see the values of the visible and hidden inputs sent to the server.
+They should be identical. Then click again on the div, and again on "trigger change". The values should now be different. When you click on submit however, the values should be the same again
+</p>   
+   
+<p>Interestingly, this doesn't happen however if you use the button instead of the div to increase the value</p>
+   
+<button type="button" phx-click="trigger_change">Trigger change event via hook</button>
+
+<p :if={@change_params} class="alert alert-danger">
+   On <%= @ts_change %> change params = <%= @change_params %> 
+</p>
+
+<p :if={@submit_params} class="alert alert-info">
+   On <%= @ts_submit %> submit params = <%= @submit_params %>
+</p>
+
+
+
+   <br>
+<%= submit("Submit") %>
+</.form>
+</div>

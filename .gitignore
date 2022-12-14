@@ -32,3 +32,4 @@ hidden_input_update-*.tar
 npm-debug.log
 /assets/node_modules/
 
+.idea

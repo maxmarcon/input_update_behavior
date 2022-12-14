@@ -31,7 +31,7 @@ Clicking on the submit button always sends the expected (identical values) to th
 
 ![submit](./submit.png)
 
-Why is that?
+Why do the hidden input and the visible input become out of sync when triggering the change event via JS?
 
-(Interestingly enough, all works as expected if the value is increased using a button and not a div)
+(Interestingly enough, everything works as expected if the value is increased using a button and not a div)
 

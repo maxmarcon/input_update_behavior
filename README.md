@@ -1,5 +1,14 @@
 # Strange input update behavior
 
+### How to run:
+
+```
+mix deps.get
+mix phx.server
+```
+
+# Description
+
 There's a hidden and a text input in a form, both holding the same value (initially 0)
 
 The value can be incremented by either clicking on a div or on a button.

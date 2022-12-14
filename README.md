@@ -9,7 +9,7 @@ mix phx.server
 
 # Description
 
-There's a hidden and a text input in a form, both holding the same value (initially 0)
+There's a hidden and a text input in a form, both bound the same assign called `value` (initially 0)
 
 The value can be incremented by either clicking on a div or on a button.
 
